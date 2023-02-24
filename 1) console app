@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+// first task - calculation of function values
+//int main()
+//{
+//	float x, st, step;
+//	printf("Enter the starting point ( (0;4] )\n");
+//	scanf_s("%f", &st);
+//	printf("x y\n");
+//	step = (4 - st) / 10;
+//	for (x = st;x <= 4;x += step) printf("%.2f %.4f\n", x, ((sin(x)) / x));
+//}
+
+// second task - fibonacci numbers
+int main()
+{
+	int d1, d2, d3, s, n, max;
+	printf("Enter the limit for sum of fibonacci numbers\n");
+	scanf_s("%d", &max);
+	s = 0;
+	d1 = 0;
+	d2 = 1;
+	for (n = 1; s+d2 <= max; n++)
+	{
+		s += d2;
+		d3 = d1 + d2;
+		d1 = d2;
+		d2 = d3;
+	}
+	printf("Amount of fibonacci numbers: %d\n", n);
+	printf("Sum of fibonacci numbers: %d\n", s);
+}
