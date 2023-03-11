@@ -16,4 +16,5 @@ int main()
     cout << "strlen " << str1 << " " << l << endl;
     cout << "strcmp " << str1 << " " << str2 << " " << c << endl;
     cout << "strcpy " << str3 << endl;
+    delete[] str3;
 }
